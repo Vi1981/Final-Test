@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALL & BRICK GAME</title>
+</head>
+
+<body>
+    <canvas id="game" width="500" height="400" style="border: 2px solid brown"></canvas>
+    <canvas id="instruction" width="500" height="400" style="border: 3px solid black"></canvas>
+
+    <script src="content.js"></script>
+    <audio  autoplay>
+        <source src="NhacHoaTau.mp3" >
+    </audio>
+    <script>
+        let howToPlay = document.getElementById('instruction');
+        let ctx = howToPlay.getContext('2d');
+
+        ctx.font = "15px Arial";
+        ctx.fillStyle = "#4C0099";
+        ctx.textAlign = 'left';
+        ctx.fillText("GAME BALL COLLIDES BRICKS ", 70, 30);
+        ctx.fillText("HOW TO PLAY: ", 40, 60);
+        ctx.fillText("* Use Left/Right Arrow Key to move Paddle ", 10, 100);
+        ctx.fillText("* Control the ball how to collide the Bricks ", 10, 130);
+        ctx.fillText("* You will get one score when one brick is broken ", 10, 160);
+        ctx.fillText("* The game will be over when your ball collides the bottom of Main Frame ", 10, 190);
+        ctx.fillText("* You will win if you break all the bricks ", 10, 220);
+
+
+
+    </script>
+</body>
+
+</html>
